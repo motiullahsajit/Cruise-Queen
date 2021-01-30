@@ -64,9 +64,9 @@
                     <input id="firstCls-count" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <button onclick="handleTicketChange('firstCls',true)" id="firstCls-increase" class="ticket-btn"><i
+                    <button onclick="handleTicketChange('firstCls',true)" class="ticket-btn"><i
                             class="fas fa-plus"></i></button>
-                    <button onclick="handleTicketChange('firstCls',false)" id="firstCls-decrease" class="ticket-btn"><i
+                    <button onclick="handleTicketChange('firstCls',false)" class="ticket-btn"><i
                             class="fas fa-minus"></i></button>
                 </div>
             </div>
@@ -77,15 +77,16 @@
                     <input id="economy-count" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <button onclick="handleTicketChange('economy',true)" id="economy-increase" class="ticket-btn"><i
+                    <button onclick="handleTicketChange('economy',true)" class="ticket-btn"><i
                             class="fas fa-plus"></i></button>
-                    <button onclick="handleTicketChange('economy',false)" id="economy-decrease" class="ticket-btn"><i
+                    <button onclick="handleTicketChange('economy',false)" class="ticket-btn"><i
                             class="fas fa-minus"></i></button>
                 </div>
             </div>
             <div class="input-group">
                 <label for="">Payment $</label>
-                <input class="inp-style" type="text" name="" placeholder="Your card number">
+                <input class="inp-style" type="text" name="" placeholder="Your Card number">
+                <input class="inp-style" type="text" name="" placeholder="Your Pin Code">
             </div>
             <div class="calculations">
                 <div class="amount">
@@ -93,7 +94,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p id="total-price">$00</p>
+                        <p id="subTotal">$00</p>
                     </div>
                 </div>
 
@@ -118,13 +119,13 @@
             <button class="btn-style" onclick="togglePopup()">Book Now</button>
         </div>
         <!-- popup -->
-        <div class="popup" id="popup-1">
-            <div class="overlay"></div>
-            <div class="content">
+        <div class="popUpCls" id="popupId">
+            <div class="overLay"></div>
+            <div class="popUpContent">
                 <button class="close-btn" onclick="togglePopup()"><i class="far fa-times-circle"></i></button>
                 <h1>Congratulations !!</h1>
                 <br>
-                <h3>Your bokking is Confirmed,have a nice journey</h3>
+                <h2>Your booking is Confirmed, Thank You.</h1>
                 <br>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere minima sit veritatis. Perferendis accusamus cum magni non soluta voluptas nulla?</p>
             </div>
