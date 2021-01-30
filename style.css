@@ -129,7 +129,7 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
- /*popUp */
+ /*popUp styles*/
 .popUpCls .overLay {
     position:fixed;
     top:0px;

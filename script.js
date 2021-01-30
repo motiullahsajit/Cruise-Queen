@@ -1,3 +1,4 @@
+// counting increase and decrease function
 function handleTicketChange(ticket, isIncrease) {
     const ticketCount = getInputValue(ticket);
     let ticketNewCount = ticketCount;
