@@ -28,13 +28,18 @@ function getInputValue(ticket) {
     return ticketCount;
 }
 //popup
-function togglePopup(totalAmount) {
-    document.getElementById("popupId").classList.toggle("active");
-    document.getElementById('firstCls-count').value = 0;
-    document.getElementById('economy-count').value = 0;
-    document.getElementById('cardNumber').value = '';
-    document.getElementById('cardPin').value = '';
-    document.getElementById('subTotal').innerText = '$ 0';
-    document.getElementById('vat-amount').innerText = '$ 0';
-    document.getElementById('total-amount').innerText = '$ 0';
+function togglePopup() {
+    if (document.getElementById('total-amount').innerText == "$0" || document.getElementById('cardNumber').value =="" || document.getElementById('cardPin').value == ""){
+        alert("Please check your card informations or the number of tickets")
+    }
+    else {
+        document.getElementById("popupId").classList.toggle("active");
+        document.getElementById('firstCls-count').value = "1";
+        document.getElementById('economy-count').value = "1";
+        document.getElementById('cardNumber').value = '1235 XXXX XXXX';
+        document.getElementById('cardPin').value = 'XXXXXX';
+        document.getElementById('subTotal').innerText = '$250';
+        document.getElementById('vat-amount').innerText = '$25';
+        document.getElementById('total-amount').innerText = '$275';
+    }
 }
