@@ -29,7 +29,7 @@ function getInputValue(ticket) {
 }
 //popup
 function togglePopup() {
-    if (document.getElementById('total-amount').innerText == "$0" || document.getElementById('cardNumber').value =="" || document.getElementById('cardPin').value == ""){
+    if (document.getElementById('total-amount').innerText == "$0" || document.getElementById('cardNumber').value == "" || document.getElementById('cardPin').value == "") {
         alert("Please check your card informations or the number of tickets")
     }
     else {
