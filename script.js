@@ -14,12 +14,12 @@ function handleTicketChange(ticket, isIncrease) {
 function sumOfTotal() {
     const firstClsCount = getInputValue('firstCls');
     const economyCount = getInputValue('economy');
-    const totalPrice = firstClsCount * 150 + economyCount * 100;
-    document.getElementById('subTotal').innerText = '$' + totalPrice;
-    const vat = Math.round(totalPrice * 0.1);
+    const subTotal = firstClsCount * 150 + economyCount * 100;
+    document.getElementById('subTotal').innerText = '$' + subTotal;
+    const vat = Math.round(subTotal * 0.1);
     document.getElementById('vat-amount').innerText = '$' + vat;
-    const grandTotal = totalPrice + vat;
-    document.getElementById('grand-total').innerText = '$' + grandTotal;
+    const totalAmount = subTotal + vat;
+    document.getElementById('total-amount').innerText = '$' + totalAmount;
 }
 //collecting input value function
 function getInputValue(ticket) {
@@ -28,11 +28,13 @@ function getInputValue(ticket) {
     return ticketCount;
 }
 //popup
-function togglePopup() {
+function togglePopup(totalAmount) {
     document.getElementById("popupId").classList.toggle("active");
     document.getElementById('firstCls-count').value = 0;
     document.getElementById('economy-count').value = 0;
+    document.getElementById('cardNumber').value = '';
+    document.getElementById('cardPin').value = '';
     document.getElementById('subTotal').innerText = '$ 0';
     document.getElementById('vat-amount').innerText = '$ 0';
-    document.getElementById('grand-total').innerText = '$ 0';
+    document.getElementById('total-amount').innerText = '$ 0';
 }

@@ -61,7 +61,7 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input id="firstCls-count" class="inp-style inp-width" type="number" name="" value="0">
+                    <input id="firstCls-count" class="inp-style inp-width" type="number" disabled name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
                     <button onclick="handleTicketChange('firstCls',true)" class="ticket-btn"><i
@@ -74,7 +74,7 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input id="economy-count" class="inp-style inp-width" type="number" name="" value="0">
+                    <input id="economy-count" class="inp-style inp-width" type="number" disabled name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
                     <button onclick="handleTicketChange('economy',true)" class="ticket-btn"><i
@@ -85,8 +85,8 @@
             </div>
             <div class="input-group">
                 <label for="">Payment $</label>
-                <input class="inp-style" type="text" name="" placeholder="Your Card number">
-                <input class="inp-style" type="text" name="" placeholder="Your Pin Code">
+                <input class="inp-style" id="cardNumber" type="number" name="" placeholder="Your Card number">
+                <input class="inp-style" id="cardPin" type="number" name="" placeholder="Your Pin Code">
             </div>
             <div class="calculations">
                 <div class="amount">
@@ -112,7 +112,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p id="grand-total">$00</p>
+                        <p id="total-amount">$00</p>
                     </div>
                 </div>
             </div>
@@ -126,8 +126,9 @@
                 <h1>Congratulations !!</h1>
                 <br>
                 <h2>Your booking is Confirmed, Thank You.</h1>
-                <br>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere minima sit veritatis. Perferendis accusamus cum magni non soluta voluptas nulla?</p>
+                    <br>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere minima sit veritatis.
+                        Perferendis accusamus cum magni non soluta voluptas nulla?</p>
             </div>
         </div>
         </div>
